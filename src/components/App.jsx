@@ -1,12 +1,18 @@
-import React from 'react'
-import QRScanner from './Studends/QrScanner'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import QRScanner from './Studends/QrScanner';
 
 const App = () => {
   return (
-    <div>
-      < QRScanner/>
-    </div>
-  )
-}
+    <Router>
+      
+       <Routes>
+          <Route path="/" element={<QRScanner/>} />
+          </Routes>
+       
+      
+    </Router>
+  );
+};
 
-export default App
+export default App;
