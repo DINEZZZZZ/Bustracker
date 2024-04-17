@@ -4,7 +4,7 @@ import QRScanner from './Studends/QrScanner'
 const App = () => {
   return (
     <div>
-      <QRScanner/>
+      < QRScanner/>
     </div>
   )
 }
