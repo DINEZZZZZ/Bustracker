@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { QrReader } from 'react-qr-reader';
+import QrReader from 'react-qr-reader';
 
 const QRScanner = () => {
   const [scannedData, setScannedData] = useState('');
@@ -18,10 +18,11 @@ const QRScanner = () => {
   const startScanning = () => {
     setScanning(true);
   };
+
   const stopScanning = () => {
-    console.log('Stopping scanning...'); 
+    console.log('Stopping scanning...');
     setScanning(false);
-    setScannedData(''); 
+    setScannedData('');
   };
 
   return (
@@ -33,6 +34,7 @@ const QRScanner = () => {
           onError={handleError}
           onScan={handleScan}
           className="w-full max-w-md"
+          facingMode="environment" // Use the back camera
         />
       )}
       {scannedData ? (
