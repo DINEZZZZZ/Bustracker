@@ -7,7 +7,7 @@ const App = () => {
     <Router>
       
        <Routes>
-          <Route path="/" element={<QRScanner/>} />
+          <Route path="/Bustracker" element={<QRScanner/>} />
           </Routes>
        
       
